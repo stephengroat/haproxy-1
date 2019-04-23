@@ -1,0 +1,6 @@
+language: generic
+services:
+  - docker
+script:
+  - docker build -t haproxy:glibc -f glibc/Dockerfile .
+  - docker build -t haproxy:musl -f musl/Dockerfile .
